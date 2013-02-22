@@ -21,7 +21,7 @@ function email_author_of_comment($comment_id, $approved) {
                 $headers = sprintf('From: '. $site_name .'Admin <%s>', get_option('admin_email'));
                 wp_mail($parent_comment->comment_author_email, $site_name.' Reply', $comment->comment_content, $headers);
             } catch (Exception $e) {
-                echo "Error Occured!" . $e->getMessage();
+                echo "Error Occurred!" . $e->getMessage();
             }
         }
     }
